@@ -1,37 +1,27 @@
-import React, { Component } from 'react';
-import {
-  DocumentCard,
-  DocumentCardPreview,
-  DocumentCardTitle,
-  DocumentCardActivity
-} from 'office-ui-fabric-react/lib/DocumentCard';
+import React, {Component} from 'react';
+import {DocumentCard, DocumentCardPreview, DocumentCardTitle, DocumentCardActivity} from 'office-ui-fabric-react/lib/DocumentCard';
 import './themes/style.css';
+import SidebarMenu from './components/sidebarmenu/sidebarmenu.component';
+import NavBar from './components/navbar/navbar.component';
+import Content from './components/content/content.component';
 
 class App extends Component {
   render() {
     return (
-      <DocumentCard onClickHref='http://bing.com'>
-        <DocumentCardPreview
-          previewImages={ [
-            {
-              previewImageSrc: require('./documentpreview.png'),
-              iconSrc: require('./iconppt.png'),
-              width: 318,
-              height: 196,
-              accentColor: '#ce4b1f'
-            }
-          ] }
-        />
-        <DocumentCardTitle title='دانلود فایل نمونه سرمایه گذاری پیشرفته'/>
-        <DocumentCardActivity
-          activity='ایجاد شده در 2 آذر 1397'
-          people={
-            [
-              { name: 'کتی لارسن', profileImageSrc: require('./avatarkat.png') }
-            ]
-          }
-          />
-      </DocumentCard>
+      <div className="App">
+        <div className="header">
+        <NavBar />
+        </div>        
+        <div className="body">
+          <div className="content">
+          <Content />
+          </div>
+          <div className="sidebar">
+            <SidebarMenu />
+          </div>      
+        </div>
+        <div className="footer"></div>
+      </div>
     );
   }
 }
