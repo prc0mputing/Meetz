@@ -1,0 +1,13 @@
+[{
+    "key": "home",
+    "url": "/",
+    "props": null
+}, {
+    "key": "showDialog",
+    "url": "/showDialog:item?",
+    "props": null
+}, {
+    "key": "showPanel",
+    "url": "/showPanel:item?",
+    "props": null
+}]
