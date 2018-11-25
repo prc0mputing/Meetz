@@ -3,7 +3,9 @@ const ActionTypes = {
     HidePanel: "HidePanel",
     LoadItems: "LoadItems",
     ShowDialog: "ShowDialog",
-    ShowPanel: "ShowPanel"
+    ShowPanel: "ShowPanel",
+    ViewDetails: "ViewDetails",
+    EditDetails: "EditDetails"
 };
 
 export default ActionTypes;

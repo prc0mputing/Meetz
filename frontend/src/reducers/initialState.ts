@@ -1,5 +1,7 @@
 export default {
     items: [],
     showDialog: false,
-    showPanel: false
+    showPanel: false,
+    selectedItem: null,
+    editable: false
 };
