@@ -95,7 +95,7 @@ class Navigation extends React.Component<Props, any> {
                                     key: "demo_dialog",
                                     name: "Demo Dialog",
                                     icon: "Contact",
-                                    onClick: event => this.onClick(event, ActionTypes.ShowDialog)
+                                    onClick: event => this.onClick(event, ActionTypes.OpenDetails + "/1")
                                 },
                                 {
                                     key: "demo_panel",

@@ -5,7 +5,8 @@ const ActionTypes = {
     ShowDialog: "ShowDialog",
     ShowPanel: "ShowPanel",
     ViewDetails: "ViewDetails",
-    EditDetails: "EditDetails"
+    EditDetails: "EditDetails",
+    OpenDetails: "OpenDetails"
 };
 
 export default ActionTypes;

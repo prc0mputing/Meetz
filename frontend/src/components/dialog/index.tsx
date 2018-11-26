@@ -7,13 +7,13 @@ import {
 /**
  * Demo Dialog
  */
-const DemoDialog = ({closeDialog, visible}) => {
+const DemoDialog = ({ closeDialog, visible }) => {
     return (
         <Dialog
-            isBlocking={true}
-            isOpen={visible}
+            hidden={!visible}
+            dialogContentProps={{ type: DialogType.close }}
+            // isBlocking={true}
             onDismiss={closeDialog}
-            type={DialogType.close}
             title="Demo Dialog">
             <h5>This is an example of creating a dialog.</h5>
         </Dialog>
