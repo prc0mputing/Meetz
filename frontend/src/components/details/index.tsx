@@ -15,7 +15,6 @@ interface Props {
 class DetailsDialog extends React.Component<Props, any> {
     render() {
         let { selectedItem } = this.props;
-        console.log(this.props);
         return (
             <Dialog
                 hidden={false}
@@ -23,7 +22,7 @@ class DetailsDialog extends React.Component<Props, any> {
                 title="Details Dialog">
                 <h5>He is going to be written by request params</h5>
                 <p>
-                    The passed parameter value is <strong>{this.props.toString()}</strong> for following request.
+                    The passed parameter value is <strong>d</strong> for following request.
                 </p>
                 {selectedItem != null && (
                     <table>

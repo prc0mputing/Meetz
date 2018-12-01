@@ -1,22 +1,22 @@
 import ActionTypes from "./actionTypes";
 
-export function viewDetails() {
+export function viewDetails(id) {
     return function (dispatch) {
         // Load the items
         dispatch({
             type: ActionTypes.ViewDetails,
-            selectedItem: { id: '2', name: 'nima' },
+            selectedItem: { id: id, name: 'nima' },
             editable: false
         });
     }
 }
 
-export function editDetails() {
+export function editDetails(id) {
     return function (dispatch) {
         // Load the items
         dispatch({
             type: ActionTypes.EditDetails,
-            selectedItem: { id: '1', name: 'nima' },
+            selectedItem: { id: id, name: 'nima' },
             editable: true
         });
     }

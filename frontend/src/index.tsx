@@ -19,8 +19,7 @@ initializeIcons("https://static2.sharepointonline.com/files/fabric/assets/icons/
 
 
 const OpenDetails = (props) => {
-    console.log(props);
-    store.dispatch(detailsActions.viewDetails() as any);
+    store.dispatch(detailsActions.viewDetails(props.match.params["id"]) as any);
     return (
         <Details />
     );
