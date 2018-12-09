@@ -1,7 +1,7 @@
 import Place from "../models/place";
 import Person from "../models/person";
 
-export default class PersonData {
+class PersonData {
     public getall(): Promise<Person[]> {
         return new Promise((resolve, reject) => {
             let requests = Object.assign({}, this._fakePersons);
@@ -60,3 +60,5 @@ export default class PersonData {
         { Id: 5, Name: "Adam Ferry", Email: "adam.fer50@msn.com", PhoneNumber: "(+97) 105-23087" }
     ];
 }
+
+export default (new PersonData());

@@ -1,7 +1,7 @@
 import * as React from "react";
 import {bindActionCreators} from 'redux';
 import {connect} from "react-redux";
-import * as listActions from "../../actions/listActions";
+import * as personActions from "../../actions/personActions";
 import {
     DetailsList,
     SelectionMode
@@ -12,21 +12,20 @@ import {
  */
 interface Props {
     actions: any,
-    items: Array<any>
+    selectedItem: Array<any>
 }
 
 /**
  * Demo List
  */
-class DemoList extends React.Component<Props, any> {
+class PersonList extends React.Component<Props, any> {
     // Render the list
     render() {
-        let {items} = this.props;
-        debugger;
-        console.log(this.props.items);
-        if(this.props.items && this.props.items.length)
+        let {selectedItem} = this.props;
+        console.log(this.props.selectedItem);
+        if(this.props.selectedItem && this.props.selectedItem.length)
         return (
-            <DetailsList items={this.props.items} />
+            <DetailsList items={this.props.selectedItem} />
         );
         return (
             <div>Nothing to display</div>
@@ -43,7 +42,7 @@ export default connect(
      */
     (state, ownProps) => {
         return {
-            items: state.list.items
+            selectedItem: state.person.selectedItem
         };
     },
     /**
@@ -51,7 +50,7 @@ export default connect(
      */
     (dispatch) => {
         return {
-            actions: listActions
+            actions: personActions
         };
     }
-)(DemoList);
+)(PersonList);

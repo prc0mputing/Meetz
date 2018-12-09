@@ -1,6 +1,7 @@
 import * as React from "react";
 import Navigation from "../navigation";
 import { debug } from "util";
+import PersonList from '../personList';
 import List from '../list';
 /**
  * Dashboard
@@ -10,6 +11,7 @@ const Dashboard = (props) => {
     return (
         <div>
             <Navigation actions={ [] } showDialog={false}  />
+            <PersonList />
             <List />
         </div>
     );

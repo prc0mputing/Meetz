@@ -10,4 +10,8 @@
     "key": "showPanel",
     "url": "/showPanel:item?",
     "props": null
+}, {
+    "key": "personList",
+    "url": "/personList:item?",
+    "props": null
 }]
