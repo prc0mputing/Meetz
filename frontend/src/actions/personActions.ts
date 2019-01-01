@@ -3,7 +3,7 @@ import PersonData from '../data/person.data';
 
 export function viewDetails(id: number) {
     return function (dispatch) {
-        PersonData.get(id).then((item) => {
+        return PersonData.get(id).then((item) => {
             dispatch({
                 type: ActionTypes.Person.Details,
                 selectedItem: item,
@@ -15,7 +15,7 @@ export function viewDetails(id: number) {
 
 export function getList() {
     return function (dispatch) {
-        PersonData.getall().then((items) => {
+        return PersonData.getall().then((items) => {
             dispatch({
                 type: ActionTypes.Person.List,
                 selectedItem: items

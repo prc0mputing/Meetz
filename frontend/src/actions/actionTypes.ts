@@ -18,7 +18,7 @@ const ActionTypes = {
     },
     Place: {
         List: "Place.List",
-        Details: "Place"
+        Details: "Place.Details"
     }
 };
 

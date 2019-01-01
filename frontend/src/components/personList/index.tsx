@@ -22,7 +22,6 @@ class PersonList extends React.Component<Props, any> {
     // Render the list
     render() {
         let {selectedItem} = this.props;
-        console.log(this.props.selectedItem);
         if(this.props.selectedItem && this.props.selectedItem.length)
         return (
             <DetailsList items={this.props.selectedItem} />

@@ -4,7 +4,7 @@ import Person from "../models/person";
 class PersonData {
     public getall(): Promise<Person[]> {
         return new Promise((resolve, reject) => {
-            let requests = Object.assign({}, this._fakePersons);
+            let requests = Object.assign([], this._fakePersons);
             resolve(requests);
         });
     }
@@ -24,7 +24,7 @@ class PersonData {
                 (criteria.name == null || v.Name == criteria.name) &&
                 (criteria.email == null || v.Email == criteria.email)
             );
-            let requests = Object.assign({}, items);
+            let requests = Object.assign([], items);
             resolve(requests);
         });
     }
@@ -52,7 +52,7 @@ class PersonData {
         });
     }
 
-    private _fakePersons: Person[] = [
+    private _fakePersons: Array<Person> = [
         { Id: 1, Name: "Saul Goodman", Email: "saul.go@hotmail.com", PhoneNumber: "(+1) 889-56340" },
         { Id: 2, Name: "Jack Peterson", Email: "pett.jack@gmail.com", PhoneNumber: "(+1) 775-44002" },
         { Id: 3, Name: "Sally Pinkman", Email: "pinkysal@yahoo.com", PhoneNumber: "(+22) 705-90560" },

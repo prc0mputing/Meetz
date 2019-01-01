@@ -22,7 +22,6 @@ class DemoList extends React.Component<Props, any> {
     // Render the list
     render() {
         let {items} = this.props;
-        debugger;
         console.log(this.props.items);
         if(this.props.items && this.props.items.length)
         return (
