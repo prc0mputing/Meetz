@@ -1,0 +1,8 @@
+.ms-Panel-content{
+    padding: 0;
+}
+
+.ms-Panel-main{
+    right: auto !important;
+    left: 0 !important;
+}

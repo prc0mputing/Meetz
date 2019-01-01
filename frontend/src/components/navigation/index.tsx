@@ -1,6 +1,6 @@
 import * as React from "react";
 import {
-    CommandBar
+    CommandBar, Nav
 } from "office-ui-fabric-react";
 import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
@@ -30,7 +30,7 @@ class Navigation extends React.Component<Props, any> {
     // Constructor
     constructor(props, context) {
         super(props, context);
-        
+
         // Bind the event
         this.close = this.close.bind(this);
         this.onClick = this.onClick.bind(this);
@@ -81,31 +81,37 @@ class Navigation extends React.Component<Props, any> {
         let { showDialog, showPanel } = this.props;
         return (
             <div>
-                <CommandBar
-                    isSearchBoxVisible={true}
-                    items={[
+                <Nav
+                    groups={[
                         {
-                            key: "newRequest",
-                            name: "New",
-                            icon: "Add",
-                            ariaLabel: 'Use left and right arrow keys to navigate',
-                            onClick: event => this.onClick(event),
-                            items: [
+                            links: [
                                 {
-                                    key: "demo_dialog",
-                                    name: "Demo Dialog",
-                                    icon: "Contact",
-                                    onClick: event => this.onClick(event, ActionTypes.OpenDetails + "/1")
+                                    name: 'Home',
+                                    url: 'http://example.com',
+                                    links: [
+                                        {
+                                            name: 'Activity',
+                                            key: 'key1',
+                                            url: '#',
+                                            onClick: event => this.onClick(event, ActionTypes.OpenDetails + "/1")
+                                        },
+                                        {
+                                            name: 'MSN',
+                                            url: '#',
+                                            key: 'key2',
+                                            onClick: event => this.onClick(event, ActionTypes.ShowPanel)
+                                        }
+                                    ],
+                                    isExpanded: true
                                 },
-                                {
-                                    key: "demo_panel",
-                                    name: "Demo Panel",
-                                    icon: "People",
-                                    onClick: event => this.onClick(event, ActionTypes.ShowPanel)
-                                }
+                                { name: 'Documents', url: 'http://example.com', key: 'key3', isExpanded: true }
                             ]
                         }
                     ]}
+                    expandedStateText={'expanded'}
+                    collapsedStateText={'collapsed'}
+                    selectedKey={'key3'}
+                    expandButtonAriaLabel={'Expand or collapse'}
                 />
                 <DemoDialog
                     visible={showDialog}

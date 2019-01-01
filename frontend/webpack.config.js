@@ -27,6 +27,10 @@ module.exports = {
         // Rules
         rules: [
             {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
                 // Target the .ts and .tsx files
                 test: /\.tsx?$/,
                 // Exclude the node modules folder
