@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    mode: 'development',
+    //mode: 'development',
     // Target the output of the typescript compiler
     context: path.join(__dirname, "src"),
 
